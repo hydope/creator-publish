@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "creator-publish"
+version = "0.1.0"
+description = "Official-API publishing and scheduling for creator tools (YouTube, TikTok, Instagram, X, Threads, Bluesky, LinkedIn, Pinterest, Facebook)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Creator Publish contributors" }]
+keywords = ["youtube", "tiktok", "instagram", "publishing", "scheduling", "creators"]
+dependencies = ["httpx>=0.27", "python-dateutil>=2.8", "apscheduler>=3.10"]
+
+[project.optional-dependencies]
+youtube = ["google-api-python-client>=2.0", "google-auth-oauthlib>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/hydope/creator-publish"
+Repository = "https://github.com/hydope/creator-publish"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["creator_publish*"]
